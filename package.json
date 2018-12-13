@@ -1,10 +1,16 @@
 {
-  "name": "RnTsTemplate",
+  "name": "rn-ts-template",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write '{.,__tests__,src/**}/*.{js,jsx,ts,tsx}'",
+    "lint": "tslint -p .",
+    "precommit": "tsc && lint-staged",
+    "studio": "open -a /Applications/Android\\ Studio.app ./android/",
+    "tsc": "tsc -p .",
+    "xcode": "open ios/$npm_package_name.xcodeproj"
   },
   "dependencies": {
     "react": "16.6.3",
@@ -16,7 +22,9 @@
     "@types/react-native": "^0.57.18",
     "@types/react-test-renderer": "^16.0.3",
     "babel-jest": "23.6.0",
+    "husky": "^1.2.0",
     "jest": "23.6.0",
+    "lint-staged": "^8.1.0",
     "metro-react-native-babel-preset": "0.48.5",
     "prettier": "^1.15.3",
     "react-addons-test-utils": "^15.6.2",
@@ -46,5 +54,13 @@
       "<rootDir>/node_modules/"
     ],
     "cacheDirectory": ".jest/cache"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["prettier --write", "tslint --fix", "git add"]
   }
 }
