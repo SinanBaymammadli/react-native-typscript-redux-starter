@@ -1,0 +1,12 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0,
+  "javascript.validate.enable": false,
+  "tslint.alwaysShowStatus": true,
+  "eslint.enable": false
+}

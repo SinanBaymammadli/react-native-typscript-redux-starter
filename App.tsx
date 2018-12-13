@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react'
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
+import React, { PureComponent } from "react";
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
 
 export interface Props {}
 
@@ -12,26 +12,26 @@ export default class App extends PureComponent<Props> {
         <Text style={styles.instructions}>To get started, edit App.jsx</Text>
         <Text style={styles.instructions}>💙</Text>
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF",
   } as ViewStyle,
   title: {
     fontSize: 22,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold",
+    textAlign: "center",
     marginBottom: 14,
   } as TextStyle,
   instructions: {
-    textAlign: 'center',
-    color: '#333333',
+    textAlign: "center",
+    color: "#333333",
     marginBottom: 6,
   } as TextStyle,
-})
+});
