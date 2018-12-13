@@ -11,7 +11,6 @@ export default class App extends PureComponent<Props> {
         <Text style={styles.instructions}>TypeScript + Prettier configured</Text>
         <Text style={styles.instructions}>To get started, edit App.jsx</Text>
         <Text style={styles.instructions}>💙</Text>
-        <Text style={styles.instructions}>{hello}</Text>
       </View>
     );
   }
